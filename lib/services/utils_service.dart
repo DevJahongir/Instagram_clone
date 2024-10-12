@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:instaclone/services/prefs_service.dart';
 import 'package:platform_device_id_v3/platform_device_id.dart';
 
 class Utils {
@@ -20,7 +21,7 @@ class Utils {
   static Future<Map<String, String>> deviceParams() async {
     Map<String, String> params = {};
     var getDeviceId = await PlatformDeviceId.getDeviceId;
-    String fcmToken = ""; //await Prefs.loadFCM();
+    String fcmToken = await Prefs.loadFCM();
 
     if (Platform.isIOS) {
       params.addAll({

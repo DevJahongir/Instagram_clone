@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#ffffff"  # Background color
+  image: assets/images/instagram_logo.png  # Path to the Instagram logo
+  branding: assets/images/meta_logo.png  # Path to the Meta logo
+  branding_mode: original
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: center

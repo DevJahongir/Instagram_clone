@@ -4,6 +4,7 @@ import 'package:instaclone/pages/home_page.dart';
 import 'package:instaclone/pages/signin_page.dart';
 import 'package:instaclone/pages/signup_page.dart';
 import 'package:instaclone/pages/splash_page.dart';
+import 'package:instaclone/services/notif_service.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,8 @@ void main() async{
       projectId: 'instaclone-2-4ac0a',
     ),
   );
+
+  await NotifService().init();
 
 
 
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Instagram',
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

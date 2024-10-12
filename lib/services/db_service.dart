@@ -65,7 +65,7 @@ class DbService {
     String uid = AuthService.currentUserId();
     var querySnapshot = await _firestore
         .collection(folder_users)
-        .orderBy("email")
+        .orderBy("fullname")
         .startAt([keyword]).get();
 
     for (var result in querySnapshot.docs) {
